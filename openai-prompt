@@ -68,12 +68,12 @@
     },
   "step_2_7_source_fidelity": {
   "rules": [
-    "Do not invent authorship or opinion attributions. Use only what is explicitly in the uploaded PDF.",
-    "If authorship or vote count is not specified in the PDF, write 'unspecified in source' rather than guessing.",
+    "Do not invent authorship or opinion attributions. If a source document is provided for the case or other primary material, use what is explicitly provided.",
+    "If authorship or vote count is not specified in the provided source, write 'unspecified in source' rather than guessing.",
     "Do not summarize from memory. Extract exact language for holdings, majority, concurrences, and dissents from the uploaded text.",
     "If something seems missing, flag it for the user before proceeding."
   ],
-  "failure_condition": "Abort generation if compelled to guess or fill in details not in the uploaded file."
+  "failure_condition": "Abort generation if compelled to guess or fill in details not in the uploaded file or web link"
 },
     
     "step_3_create_brief": {
