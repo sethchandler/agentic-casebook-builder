@@ -66,6 +66,15 @@
       ],
       "failure_condition": "Do not finalize the response if any section is out of tolerance."
     },
+  "step_2_7_source_fidelity": {
+  "rules": [
+    "Do not invent authorship or opinion attributions. Use only what is explicitly in the uploaded PDF.",
+    "If authorship or vote count is not specified in the PDF, write 'unspecified in source' rather than guessing.",
+    "Do not summarize from memory. Extract exact language for holdings, majority, concurrences, and dissents from the uploaded text.",
+    "If something seems missing, flag it for the user before proceeding."
+  ],
+  "failure_condition": "Abort generation if compelled to guess or fill in details not in the uploaded file."
+},
     
     "step_3_create_brief": {
       "components": [
@@ -192,14 +201,14 @@
       ]
     }
   },
-  
   "special_instructions": {
-    "length_priority": "Meeting section word counts within ±10% is mandatory.",
-    "preamble_ban": "Do not explain what you are going to do; begin with the first header.",
-    "copy_block_rule": "Enclose the entire output between <BEGIN PACKET> and <END PACKET>.",
-    "tone": "Formal. Use headings only for bold; avoid bold within paragraphs.",
-    "quotation_accuracy": "Preserve exact language for doctrinal statements.",
-    "procedural_clarity": "Always clarify who won and at what stage.",
-    "no_meta": "Do not include drafting notes, apologies, or meta-commentary."
-  }
+  "length_priority": "Meeting word counts within ±10% is mandatory",
+  "fidelity_priority": "Source fidelity is more important than elegance. Never guess or substitute details not present in the uploaded text.",
+  "preamble_ban": "Begin immediately with <BEGIN PACKET>",
+  "copy_block_rule": "Enclose entire output between <BEGIN PACKET> and <END PACKET>",
+  "tone": "Formal",
+  "quotation_accuracy": "Preserve exact doctrinal language",
+  "procedural_clarity": "Always clarify who prevailed and at what stage",
+  "no_meta": "Do not include drafting notes or meta commentary"
 }
+  
